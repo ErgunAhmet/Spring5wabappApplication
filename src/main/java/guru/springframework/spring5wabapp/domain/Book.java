@@ -8,8 +8,10 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String title;
     private String isbn;
+
     @ManyToOne
     private Publisher publisher;
     @ManyToMany
@@ -72,7 +74,7 @@ public class Book {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", isbn='" + isbn + '\'' +
-                ", authors=" + authors +
+
                 '}';
     }
 
